@@ -1,5 +1,5 @@
 class String
-  def contains_ass?
+  def has_ass?
     detect != nil ? true : false
   end
 
