@@ -2,15 +2,20 @@
 <HTML>
 <head>
   <title>hyphens</title>
-  <link rel='stylesheet' type='text/css' ref='../assets/styles/app.css'>
+  <link rel='stylesheet' type='text/css' href='/styles/reset.css'>
+  <link rel='stylesheet' type='text/css' href='/styles/app.css'>
 </head>
 <body>
-  <img src='http://imgs.xkcd.com/comics/hyphen.jpg' id='xkcd-embed'>
-  <form action='/' method='POST'>
-    <input type='text' name='input' id='form-field'>
-    <input type='submit' value='Go' id='submit-button'>
-  </form>
-
-  <%= content %>
+  <a href='https://github.com/deniseyu/learning-cuba.git'><nav id='github-link'>code</nav></a>
+  <main>
+    <img src='http://imgs.xkcd.com/comics/hyphen.jpg' id='xkcd-embed'>
+    <form action='/' method='POST'>
+      <input type='text' name='input' id='form-field' autocomplete='off'>
+      <input type='submit' value='go' id='submit-button'>
+    </form>
+    <section id='output'>
+      <%= content %>
+    </section>
+  </main>
 </body>
 </html>

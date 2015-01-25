@@ -5,6 +5,8 @@ require_relative 'models/hyphenator'
 
 Cuba.plugin(Cuba::Render)
 Cuba.settings[:render][:template_engine] = "erb"
+Cuba.use Rack::Static, root: "assets", urls: ["/styles"]
+# Cuba.use Rack::Utils
 
 Cuba.define do
 

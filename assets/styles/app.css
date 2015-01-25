@@ -1,4 +1,54 @@
+@import url(https://fonts.googleapis.com/css?family=Cousine);
+
 body {
-  color: blue;
-  font-size: 5em;
+  padding: 5%;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 2em;
+  font-family: 'Cousine';
+  position: relative;
+}
+
+main {
+  text-align: center;
+}
+
+#xkcd-embed {
+  width: 500px;
+  position: relative;
+}
+
+#form-field {
+  display: inline-block;
+  font-size: 0.8em;
+  font-family: 'Cousine';
+  padding: 5px;
+  width: 500px;
+}
+
+#submit-button {
+  display: inline-block;
+  width: 80px;
+  font-size: 0.8em;
+  padding: 5px;
+  font-family: 'Cousine';
+  background-color: white;
+  color: black;
+  border: 2px solid black;
+}
+
+#output {
+  margin-top: 20px;
+}
+
+#github-link {
+  position: fixed;
+  padding: 5px;
+  top: 20px;
+  right: -25px;
+  background-color: black;
+  color: white;
+  transform: rotate(270deg);
+  z-index: 1000;
 }
