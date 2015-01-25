@@ -1,16 +1,29 @@
 require 'cuba'
 require 'cuba/render'
 require 'erb'
+require_relative 'models/hyphenator'
 
-# Cuba.use Rack::Session::Cookie, :secret => "__a_very_long_string__"
-# Cuba.use Rack::Protection
 Cuba.plugin(Cuba::Render)
 Cuba.settings[:render][:template_engine] = "erb"
 
 Cuba.define do
 
-  on root do
-    res.write view("index")
+  on get do
+    on root do
+      res.write view("index")
+    end
+  end
+
+  on post do
+    on root do
+      on param("input") do |input|
+        hyphened = input.move_hyphen
+        res.write view("result", { input: hyphened })
+      end
+      on true do
+        res.write view("index")
+      end
+    end
   end
 
 end
